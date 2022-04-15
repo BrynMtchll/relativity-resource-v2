@@ -1,0 +1,17 @@
+@import "../variables.scss";
+
+.relative-motion {
+    &__visual {
+        position: relative;
+        border: 1px solid $light-primary;
+        height: 100%;
+        border-radius: 20px;
+        // left: 20%;
+        // width: calc(100% + 20px)
+
+    }
+
+    &__example {
+        font-size: $font-size-2;
+    }
+}

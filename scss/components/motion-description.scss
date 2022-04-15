@@ -1,0 +1,18 @@
+@import "../variables.scss";
+@import "../base/mixins.scss";
+
+.motion-description {
+    background: $dark-secondary;
+    padding: 70px;
+
+    &__example-list {
+        // border: 1px solid white;
+    }
+
+    &__example {
+        font-weight: 400;
+        height: $row-height;
+        @include flex(inherit, center);
+
+    }
+}

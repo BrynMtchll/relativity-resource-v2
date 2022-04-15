@@ -1,0 +1,21 @@
+@import "../variables.scss";
+@import "../base/mixins.scss";
+
+.section-header {
+    @include strip(10px);
+    background: $color-primary;
+    width: calc(100% + #{2*$layout-margin});
+    
+    &__text {
+        font-size: $font-size-6;
+        font-weight: 600;
+        @include flex(space-between, center);
+    }
+
+    &--light {
+        color: $light-primary;
+    }
+    &--dark {
+        color: $dark-primary;
+    }
+}

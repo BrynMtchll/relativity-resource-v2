@@ -1,0 +1,40 @@
+@import "../variables.scss";
+@import "../base/mixins.scss";
+
+.section-subheader {
+    @include strip(0);
+    &__shape {
+        @include flex(center, center);
+    }
+    &__circle {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+    }
+
+    &--right {
+        text-align: right;
+    }
+
+    &__text {
+        padding: 10px;
+        font-size: $font-size-4;
+        font-weight: 500;
+        @include flex(initial, center);
+        text-transform: uppercase;
+    }
+
+    &--light {
+        background: $light-primary;
+        .section-subheader__circle {
+            background: $dark-primary;
+        }
+    }
+    &--dark {
+        background: $dark-primary;
+
+        .section-subheader__circle {
+            background: $light-primary;
+        }
+    }
+}

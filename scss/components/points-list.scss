@@ -1,0 +1,9 @@
+@import "../variables.scss";
+
+.points-list {
+    &__item {
+        font-size: $font-size-1;
+        display: block;
+        font-weight: $font-weight-reg;
+    }
+}

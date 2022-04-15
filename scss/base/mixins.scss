@@ -1,0 +1,22 @@
+@import "../variables.scss";
+
+@mixin shape($width, $height) {
+    position: relative;
+    display: inline-block;
+    width: $width;
+    height: $height;
+}
+
+@mixin flex($content-justification: initial, $items-alignment: initial, $flex-direction: row) {
+    display: flex;
+    justify-content: $content-justification;
+    align-items: $items-alignment;
+    flex-direction: $flex-direction;
+}
+
+@mixin strip($horz-padding: 10px) {
+    position: relative;
+    right: $layout-margin;
+    width: calc(100% + #{2*$layout-margin});
+    padding: $horz-padding $layout-margin;
+}

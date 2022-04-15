@@ -1,0 +1,25 @@
+@import "../variables.scss";
+@import "../base/mixins.scss";
+
+.shape {
+    @include shape($card-inner-height*3, $card-inner-height);
+    top: 2px;
+    
+    &__circle {
+        @include shape($card-inner-height, $card-inner-height);
+        border-radius: 50%;
+        background: $dark-primary;
+        
+    }
+
+    &__half-circle {
+        @include shape($card-inner-height / 2, $card-inner-height);
+        border-radius: 0 $card-inner-height*1.5/2 $card-inner-height*1.5/2 0;
+        background: $dark-primary;
+        right: 7px;
+
+        &--right {
+            right: 14px;
+        }
+    }
+}

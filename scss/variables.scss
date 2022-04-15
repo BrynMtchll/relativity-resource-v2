@@ -1,0 +1,45 @@
+/*
+  text variables
+*/
+
+$font-size-0: 16px;
+$font-size-1: 1.333rem;
+$font-size-2: 1.777rem;
+$font-size-3: 2.369rem;
+$font-size-4: 3.157rem;
+$font-size-5: 4.209rem;
+$font-size-6: 5.611rem;
+$font-size-7: 7.479rem;
+$font-size-8: $font-size-7*1.333;
+
+$line-height-0: 21px;
+
+$font-weight-reg: 500;
+
+
+/*
+  layout variables
+*/
+
+$grid-columns: 10;
+$max-grid-rows: 100;
+$layout-margin: 140px;
+$row-gap: 20px;
+$row-height: 44px;
+
+
+/*
+  color variables
+*/
+
+$light-primary: hsl(350, 5%, 93%);
+$light-secondary: hsl(350, 0%, 55%);
+$dark-primary: hsl(350, 5%, 5%);
+$dark-secondary: hsl(350, 5%, 8%);
+$color-primary: hsl(350, 70%, 50%);
+
+/*
+  misc variables
+*/
+
+$card-inner-height: 150px;

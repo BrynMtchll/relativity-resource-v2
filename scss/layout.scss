@@ -1,0 +1,56 @@
+@import "variables.scss";
+
+.l-grid {
+    display: grid;
+    grid-template-columns: repeat($grid-columns, minmax(0, 1fr));
+    grid-auto-rows: minmax($row-height, max-content);
+    column-gap: 20px;
+    // row-gap: $row-gap;
+
+    &--row-gap {
+        row-gap: $row-gap;
+    }
+
+    &--half {
+        grid-template-columns: repeat($grid-columns/2, minmax(0, 1fr));
+    }
+
+
+    &__c {
+        @for $i from 1 through $grid-columns+1 {
+            &--s-#{$i} {
+                grid-column-start: $i;
+            }
+            &--e-#{$i} {
+                grid-column-end: $i;
+            }
+        }
+    }
+
+    &__r {
+        @for $i from 1 through $max-grid-rows {
+            &--s-#{$i} {
+                grid-row-start: $i;
+            }
+            &--e-#{$i} {
+                grid-row-end: $i+1;
+            }
+        }
+    }
+}
+
+.l-section {
+    color: $light-primary;
+    padding: 0 $layout-margin;
+    padding-bottom: 300px;
+    overflow: hidden;
+
+    &--light {
+        background: $light-primary;
+        color: $dark-primary;
+    }
+    &--dark {
+        background: $dark-primary;
+        color: $light-primary;
+    }
+}

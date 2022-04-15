@@ -1,0 +1,10 @@
+@import "../variables.scss";
+
+.intro {
+    font-size: $font-size-3;
+    height: 100%;
+    align-content: end;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: $line-height-0;
+}

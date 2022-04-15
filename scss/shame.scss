@@ -1,0 +1,16 @@
+@import "variables.scss";
+
+/*
+    stagger semi circle of content table item shapes
+*/
+
+// @for $i from 1 through 6 {
+//     .l-content-table__item:nth-child(#{$i}) {
+//         .card__half-circle {
+//             right: 40px / $i + 5px;
+//             &--right {
+//                 right: 80px / $i + 10px;
+//             }
+//         }
+//     }
+// }

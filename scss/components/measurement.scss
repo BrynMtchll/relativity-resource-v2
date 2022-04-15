@@ -1,0 +1,34 @@
+@import "../variables.scss";
+@import "../base/mixins.scss";
+
+.measurement {
+    height: 100%;
+    &__bar {
+        border: 1px solid $light-primary;
+        height: 100%;
+    }
+
+    &__bar-fill {
+        width: 100px;
+        background: $color-primary;
+        height: 100%;
+    }
+
+    &__label {
+    }
+
+    &__value {
+    }
+
+    &__text {
+        height: 100%;
+        font-weight: 400;
+        @include flex(center, inherit, column);
+        // padding-left: 10px;
+        border-bottom: 1px solid $light-primary;
+
+        &--left {
+            width: calc(100% + 20px);
+        }
+    }
+}

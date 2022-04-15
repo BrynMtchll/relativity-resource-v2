@@ -1,0 +1,12 @@
+@import "../variables.scss";
+@import "../base/mixins.scss";
+
+.bullet {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: $light-primary;
+    margin-right: $row-gap;
+
+}

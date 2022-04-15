@@ -1,0 +1,28 @@
+@import "../variables.scss";
+
+.card {
+    height: $card-inner-height + 5px;
+    border: 3px solid $dark-primary;
+    // border-bottom: 6px solid $dark-primary;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    &__shape {
+        top: 2px;
+    }
+
+    &__number {
+        font-size: $font-size-0;
+        padding: 10px;
+        font-weight: 500;
+    }
+
+    &__header {
+        font-weight: 500;
+        font-size: $font-size-0;
+        width: 435px;
+        text-align: end;
+        padding: 10px;
+    }
+}
