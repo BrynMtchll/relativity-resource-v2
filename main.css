@@ -640,6 +640,17 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   border-radius: 20px;
   width: 100vw; }
 
+.frames-canvas {
+  height: 700px;
+  border: 1px solid #eeeced; }
+
+.carriage-canvas {
+  position: relative;
+  height: 100px;
+  width: 150%;
+  right: 20%;
+  background: #1b1819; }
+
 /*
   text variables
 */
@@ -732,27 +743,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 /*
   misc variables
 */
-.law__statement {
-  font-size: 1.333rem;
-  font-weight: 500; }
-
-.law__statement-supplement {
-  font-size: 1.333rem;
-  font-weight: 500;
-  color: #8c8c8c; }
-
-.law__elaboration {
-  position: relative;
-  display: flex;
-  justify-content: inherit;
-  align-items: inherit;
-  flex-direction: row;
-  align-content: flex-end;
-  height: 100%;
-  font-size: 1.333rem;
-  font-weight: 500;
-  color: #8c8c8c; }
-
 .law__example {
   height: 550px;
   border: 1px solid #eeeced;
@@ -843,7 +833,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   misc variables
 */
 .motion-description {
-  background: #151314;
+  background: #1b1819;
   padding: 70px; }
   .motion-description__example {
     font-weight: 400;
@@ -868,6 +858,69 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 .opening-statement {
   font-size: 4.209rem;
   font-weight: 600; }
+
+/*
+  text variables
+*/
+/*
+  layout variables
+*/
+/*
+  color variables
+*/
+/*
+  misc variables
+*/
+/*
+  text variables
+*/
+/*
+  layout variables
+*/
+/*
+  color variables
+*/
+/*
+  misc variables
+*/
+.perspective-cubes {
+  position: relative;
+  perspective: 20px; }
+  .perspective-cubes .perspective-cubes__cube-front {
+    border: 2px solid #eeeced;
+    width: 100%;
+    height: 100%; }
+  .perspective-cubes .perspective-cubes__cube-side {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute; }
+  .perspective-cubes .perspective-cubes__left {
+    transform-origin: bottom left;
+    transform: rotateY(-270deg);
+    border-top: 2px solid #eeeced;
+    border-bottom: 2px solid #eeeced; }
+  .perspective-cubes .perspective-cubes__right {
+    transform-origin: bottom right;
+    transform: rotateY(265deg);
+    border-top: 2px solid #eeeced;
+    border-bottom: 2px solid #eeeced; }
+  .perspective-cubes .perspective-cubes__bottom {
+    transform-origin: bottom right;
+    transform: rotateX(-280deg);
+    border-left: 2px solid #eeeced; }
+  .perspective-cubes .perspective-cubes__top {
+    transform-origin: top right;
+    transform: rotateX(280deg);
+    border-left: 2px solid #eeeced; }
+  .perspective-cubes .perspective-cubes__text {
+    padding: 50px;
+    display: flex;
+    justify-content: initial;
+    align-items: initial;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%; }
 
 /*
   text variables
@@ -991,34 +1044,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 /*
   misc variables
 */
-.section-intro-main {
-  font-weight: 500;
-  font-size: 2.369rem;
-  border: 3px solid #eeeced;
-  padding: 100px; }
-  .section-intro-main--secondary {
-    color: #8c8c8c; }
-  .section-intro-main--small {
-    font-size: 1.777rem; }
-
-.section-intro-supplement {
-  margin-top: 44px;
-  font-size: 1.333rem;
-  font-weight: 500;
-  color: #8c8c8c; }
-
-/*
-  text variables
-*/
-/*
-  layout variables
-*/
-/*
-  color variables
-*/
-/*
-  misc variables
-*/
 /*
   text variables
 */
@@ -1077,6 +1102,58 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 /*
   misc variables
 */
+.text-block--supplement {
+  margin-top: 44px; }
+
+.text-block--header {
+  font-weight: 500; }
+
+.text-block--xl {
+  font-weight: 500;
+  font-size: 3.157rem; }
+
+.text-block--l {
+  font-weight: 500;
+  font-size: 2.369rem;
+  padding: 100px; }
+
+.text-block--secondary {
+  color: #8c8c8c; }
+
+.text-block--half-secondary {
+  color: #bdbcbc; }
+
+.text-block--m {
+  font-weight: 500;
+  font-size: 1.777rem; }
+
+.text-block--s {
+  font-weight: 500;
+  font-size: 1.333rem; }
+
+.text-block--xs {
+  font-weight: 500;
+  font-size: 16px; }
+
+.text-block--centered {
+  padding: 20px;
+  text-align: center; }
+
+.text-block--bordered {
+  border: 3px solid #eeeced; }
+
+/*
+  text variables
+*/
+/*
+  layout variables
+*/
+/*
+  color variables
+*/
+/*
+  misc variables
+*/
 /*
   text variables
 */
@@ -1112,22 +1189,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     right: 7px; }
     .shape__half-circle--right {
       right: 14px; }
-
-/*
-  text variables
-*/
-/*
-  layout variables
-*/
-/*
-  color variables
-*/
-/*
-  misc variables
-*/
-.subsection-header {
-  font-size: 3.157rem;
-  font-weight: 500; }
 
 /*
   text variables

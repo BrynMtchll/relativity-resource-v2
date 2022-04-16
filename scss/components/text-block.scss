@@ -1,0 +1,52 @@
+@import "../variables.scss";
+
+.text-block {
+    &--supplement {
+        margin-top: 44px;
+    }
+
+    &--header {
+        font-weight: 500;
+    }
+
+    &--xl {
+        font-weight: $font-weight-reg;
+        font-size: $font-size-4;
+    }
+
+    &--l {
+        font-weight: $font-weight-reg;
+        font-size: $font-size-3;
+        padding: 100px;
+    }
+
+    &--secondary {
+        color: $light-secondary;
+    }
+
+    &--half-secondary {
+        color: $light-half-secondary;
+    }
+
+    &--m {
+        font-weight: $font-weight-reg;
+        font-size: $font-size-2;
+    }
+
+    &--s {
+        font-weight: $font-weight-reg;
+        font-size: $font-size-1;
+    }
+    &--xs {
+        font-weight: $font-weight-reg;
+        font-size: $font-size-0;
+    }
+    &--centered {
+        padding: 20px;
+        text-align: center;
+    }
+
+    &--bordered {
+        border: 3px solid $light-primary;
+    }
+}

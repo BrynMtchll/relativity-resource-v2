@@ -34,8 +34,9 @@ $row-height: 44px;
 
 $light-primary: hsl(350, 5%, 93%);
 $light-secondary: hsl(350, 0%, 55%);
+$light-half-secondary: mix($light-primary, $light-secondary, 50%);
 $dark-primary: hsl(350, 5%, 5%);
-$dark-secondary: hsl(350, 5%, 8%);
+$dark-secondary: hsl(350, 5%, 10%);
 $color-primary: hsl(350, 70%, 50%);
 
 /*

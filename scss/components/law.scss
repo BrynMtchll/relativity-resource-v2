@@ -2,39 +2,6 @@
 @import "../base/mixins.scss";
 
 .law {
-    &__header {
-        // text-align: right;
-    }
-    &__statement {
-        font-size: $font-size-1;
-        font-weight: $font-weight-reg;
-
-        &--right {
-            // text-align: right;
-        }    
-    }
-
-    &__statement-supplement {
-        font-size: $font-size-1;
-        font-weight: $font-weight-reg;
-        color: $light-secondary;
-
-        &--right {
-            // text-align: right;
-        }
-    }
-
-    &__elaboration {
-        position: relative;
-        @include flex(inherit, inherit);
-        align-content: flex-end;
-
-        height: 100%;
-        font-size: $font-size-1;
-        font-weight: $font-weight-reg;
-        color: $light-secondary;
-    }
-
     &__example {
         height: 550px;
         border: 1px solid $light-primary;

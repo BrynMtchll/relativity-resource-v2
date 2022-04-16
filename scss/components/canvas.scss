@@ -26,6 +26,19 @@
     border-bottom: 2px solid $light-primary;
     right: $layout-margin;
     border-radius: 20px;
-
     width: 100vw;
+}
+
+.frames-canvas {
+    height: 700px;
+    border: 1px solid $light-primary;
+}
+
+.carriage-canvas {
+    position: relative;
+    height: 100px;
+    width: 150%;
+    right: 20%;
+    // border: 1px solid $light-primary;
+    background: $dark-secondary;
 }
