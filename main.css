@@ -619,7 +619,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   z-index: -1; }
 
 .motion-canvas {
-  border: 2px solid #eeeced;
+  border: 1px dashed #eeeced;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -631,13 +631,16 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     border-radius: 50%;
     background: #d92644; }
 
+.law-canvas {
+  height: 550px;
+  border: 1px dashed #eeeced; }
+
 .orbits-canvas {
   position: relative;
   height: 90vh;
-  border-top: 2px solid #eeeced;
-  border-bottom: 2px solid #eeeced;
+  border-top: 1px dashed #eeeced;
+  border-bottom: 1px dashed #eeeced;
   right: 140px;
-  border-radius: 20px;
   width: 100vw; }
 
 .frames-canvas {
@@ -650,6 +653,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   width: 150%;
   right: 20%;
   background: #1b1819; }
+
+.bullet-light-canvas {
+  height: 800px;
+  border: 1px dashed #eeeced; }
 
 /*
   text variables
@@ -731,22 +738,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 /*
   misc variables
 */
-/*
-  text variables
-*/
-/*
-  layout variables
-*/
-/*
-  color variables
-*/
-/*
-  misc variables
-*/
-.law__example {
-  height: 550px;
-  border: 1px solid #eeeced;
-  border-radius: 20px; }
+.lead {
+  font-size: 1.333rem;
+  font-weight: 500; }
 
 /*
   text variables
@@ -760,9 +754,37 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 /*
   misc variables
 */
-.lead {
-  font-size: 1.333rem;
-  font-weight: 500; }
+.light-streak {
+  position: relative;
+  height: 100%;
+  width: calc(100% + 280px);
+  right: 140px;
+  overflow: hidden;
+  width: 50%; }
+  .light-streak__ray {
+    position: absolute;
+    top: 55%;
+    background: linear-gradient(to bottom, #f0a8b4 20%, #e4677c 100%);
+    background: #dd4e66; }
+    .light-streak__ray-1 {
+      box-shadow: 0 0 20px 5px #dd4e66;
+      width: 100%; }
+    .light-streak__ray-2 {
+      box-shadow: 0 0 30px 1px #e38998;
+      width: 80%;
+      left: 10%; }
+    .light-streak__ray-3 {
+      box-shadow: 0 0 40px 0.5px #e8b1ba;
+      width: 60%;
+      left: 20%; }
+    .light-streak__ray-4 {
+      box-shadow: 0 0 5px 0.1px #eac5cb;
+      width: 55%;
+      left: 22.5%; }
+    .light-streak__ray-5 {
+      box-shadow: 0 0 200px 2px #eeeced;
+      width: 30%;
+      left: 35%; }
 
 /*
   text variables

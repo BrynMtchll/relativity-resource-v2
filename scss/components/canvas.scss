@@ -7,7 +7,7 @@
 }
 
 .motion-canvas {
-    border: 2px solid $light-primary;
+    border: 1px dashed $light-primary;
     height: 100%;
     @include flex(center, center);
 
@@ -19,13 +19,17 @@
     }
 }
 
+.law-canvas {
+    height: 550px;
+    border: 1px dashed $light-primary;
+}
+
 .orbits-canvas{
     position: relative;
     height: 90vh;
-    border-top: 2px solid $light-primary;
-    border-bottom: 2px solid $light-primary;
+    border-top: 1px dashed $light-primary;
+    border-bottom: 1px dashed $light-primary;
     right: $layout-margin;
-    border-radius: 20px;
     width: 100vw;
 }
 
@@ -41,4 +45,9 @@
     right: 20%;
     // border: 1px solid $light-primary;
     background: $dark-secondary;
+}
+
+.bullet-light-canvas {
+    height: 800px;
+    border: 1px dashed $light-primary;
 }
