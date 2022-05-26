@@ -38,6 +38,11 @@ $light-half-secondary: mix($light-primary, $light-secondary, 50%);
 $dark-primary: hsl(350, 5%, 5%);
 $dark-secondary: hsl(350, 5%, 10%);
 $color-primary: hsl(350, 70%, 50%);
+$color-light-primary: mix($color-primary, $light-primary, 40%);
+$color-light-secondary: mix($color-primary, $light-secondary, 45%);
+$mid-tone: mix($dark-secondary, white, 75%);
+
+
 
 /*
   misc variables

@@ -2,17 +2,8 @@
 @import "../base/mixins.scss";
 
 .motion-description {
-    background: $dark-secondary;
-    padding: 70px;
-
-    &__example-list {
-        // border: 1px solid white;
-    }
-
-    &__example {
-        font-weight: 400;
-        height: $row-height;
-        @include flex(inherit, center);
-
-    }
+    font-size: $font-size-1;
+    border-bottom: 0.5px solid $light-primary;
+    padding-bottom: 10px;
+    width: 50%;
 }

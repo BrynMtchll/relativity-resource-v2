@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-.text-block {
+.text {
     &--supplement {
         margin-top: 44px;
     }
@@ -48,5 +48,17 @@
 
     &--bordered {
         border: 3px solid $light-primary;
+    }
+
+    &--padded {
+        padding: 10px;
+    }
+
+    &--thin {
+        font-weight: 400;
+    }
+
+    &--underline {
+        border-bottom: 0.5px solid $light-primary;
     }
 }

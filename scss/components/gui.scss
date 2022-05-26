@@ -1,0 +1,107 @@
+@import "../variables.scss";
+@import "../base/mixins.scss";
+
+.gui {
+    &__boost-btn {
+        position: relative;
+        overflow: hidden;
+        box-shadow: 3px 3px 9px inset $color-light-secondary;
+        border: 0.5px solid $color-light-primary;
+        background: $dark-primary;
+    }
+
+    &__boost-btn-inner {
+        position: absolute;
+        width: 80%;
+        height: 70%;
+        background: $dark-secondary;
+        left: 6%;
+        top: 9%;
+        box-shadow: 3px 3px 6px $color-light-secondary;
+        border: 0.5px solid $color-light-primary;
+        @include flex(center, center);
+        font-weight: 400;
+        color: $color-primary;
+    }
+
+    &__input-box {
+        @include flex(inherit, flex-end);
+    }
+
+    &__value {
+        position: relative;
+        border-bottom: 1px solid $mid-tone;
+        color: $color-primary;
+        
+        vertical-align: middle;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+        // height: 100%;
+
+        &::placeholder {
+            color: $mid-tone;
+            // white-space: pre-line;
+        }
+    }
+
+    &__direction-dial{
+        position: relative;
+        width: 2 * $row-height;
+        border-radius: 50%;
+        border: 0.5px solid $color-light-primary;
+        // box-shadow: 3px 3px 9px inset $color-light-secondary;
+        background: $dark-primary;
+
+        &-inner {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            // box-shadow: 3px 3px 6px $color-light-secondary;
+            border: 0.5px solid $color-light-primary;
+            top: 10%;
+            left: 10%;
+            border-radius: 50%;
+            background: $dark-secondary;
+        }
+
+
+        &-point {
+            position: absolute;
+            width: calc(50%);
+            height: calc(50%);
+            background: $dark-secondary;
+            border-bottom-right-radius: 50%;
+            border-top: 0.5px solid $color-light-primary;
+            border-left: 0.5px solid $color-light-primary;
+            top: -0.5px;
+            left: -0.6px;
+            transform-origin: bottom right;
+            box-sizing: content-box;
+
+        }
+
+        &-nob {
+            position: absolute;
+            width: 40%;
+            height: 40%;
+            background: $light-primary;
+            border-radius: 50%;
+            left: 30%;
+            top: 30%;
+            border: 0.5px solid mix($color-primary, $light-primary, 60%);
+            // box-shadow: 0 0 5px 1px inset mix($color-primary, $light-secondary, 55%);
+            // box-shadow: 0.5px 0.5px 0 3px $mid-tone;
+        }
+
+        &-dot {
+            position: absolute;
+            left: calc(50% - 1px);
+            top: calc(50% - 1px);
+            background: mix($color-primary, $light-primary, 50%);
+            border: 0.5px solid mix($color-primary, $light-primary, 50%);
+            box-shadow: 0 0 5px 1px mix($color-primary, $light-secondary, 55%);
+            border-radius: 20px;
+        }
+    }
+}

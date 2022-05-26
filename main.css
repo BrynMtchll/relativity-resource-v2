@@ -38,9 +38,10 @@ del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+table, caption, tbody, tfoot, thead, tr, th, td, input, button {
   margin: 0;
   padding: 0;
+  background: none;
   border: 0;
   outline: 0;
   font-weight: inherit;
@@ -619,12 +620,14 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   z-index: -1; }
 
 .motion-canvas {
-  border: 1px dashed #eeeced;
+  border: 0.5px solid #e69da9;
   height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row; }
+  flex-direction: row;
+  box-shadow: 0 0 15px 2px inset #ab636f; }
   .motion-canvas .motion-canvas__ball {
     width: 100px;
     height: 100px;
@@ -701,10 +704,102 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 /*
   misc variables
 */
-.interact-prompt {
+/*
+  text variables
+*/
+/*
+  layout variables
+*/
+/*
+  color variables
+*/
+/*
+  misc variables
+*/
+.gui__boost-btn {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 3px 3px 9px inset #af5e6c;
+  border: 0.5px solid #e69da9;
+  background: #0d0c0c; }
+
+.gui__boost-btn-inner {
+  position: absolute;
+  width: 80%;
+  height: 70%;
+  background: #1b1819;
+  left: 6%;
+  top: 9%;
+  box-shadow: 3px 3px 6px #af5e6c;
+  border: 0.5px solid #e69da9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   font-weight: 400;
-  color: #8c8c8c;
-  padding-top: 10px; }
+  color: #d92644; }
+
+.gui__input-box {
+  display: flex;
+  justify-content: inherit;
+  align-items: flex-end;
+  flex-direction: row; }
+
+.gui__value {
+  position: relative;
+  border-bottom: 1px solid #545252;
+  color: #d92644;
+  vertical-align: middle;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  width: 100%; }
+  .gui__value::placeholder {
+    color: #545252; }
+
+.gui__direction-dial {
+  position: relative;
+  width: 88px;
+  border-radius: 50%;
+  border: 0.5px solid #e69da9;
+  background: #0d0c0c; }
+  .gui__direction-dial-inner {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border: 0.5px solid #e69da9;
+    top: 10%;
+    left: 10%;
+    border-radius: 50%;
+    background: #1b1819; }
+  .gui__direction-dial-point {
+    position: absolute;
+    width: calc(50%);
+    height: calc(50%);
+    background: #1b1819;
+    border-bottom-right-radius: 50%;
+    border-top: 0.5px solid #e69da9;
+    border-left: 0.5px solid #e69da9;
+    top: -0.5px;
+    left: -0.6px;
+    transform-origin: bottom right;
+    box-sizing: content-box; }
+  .gui__direction-dial-nob {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    background: #eeeced;
+    border-radius: 50%;
+    left: 30%;
+    top: 30%;
+    border: 0.5px solid #e17587; }
+  .gui__direction-dial-dot {
+    position: absolute;
+    left: calc(50% - 1px);
+    top: calc(50% - 1px);
+    background: #e38998;
+    border: 0.5px solid #e38998;
+    box-shadow: 0 0 5px 1px #b65465;
+    border-radius: 20px; }
 
 /*
   text variables
@@ -814,21 +909,52 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   height: 100%; }
   .measurement__bar {
     border: 1px solid #eeeced;
-    height: 100%; }
+    height: 100%;
+    overflow: hidden; }
   .measurement__bar-fill {
     width: 100px;
     background: #d92644;
     height: 100%; }
   .measurement__text {
     height: 100%;
-    font-weight: 400;
+    display: flex;
+    justify-content: inherit;
+    align-items: inherit;
+    flex-direction: row;
+    padding-top: 5px;
+    padding-left: 20px; }
+    .measurement__text--right {
+      float: right; }
+  .measurement__value {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: inherit;
     flex-direction: column;
-    border-bottom: 1px solid #eeeced; }
-    .measurement__text--left {
-      width: calc(100% + 20px); }
+    width: 40px; }
+  .measurement__label {
+    height: 100%;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: inherit;
+    flex-direction: column; }
+
+/*
+  text variables
+*/
+/*
+  layout variables
+*/
+/*
+  color variables
+*/
+/*
+  misc variables
+*/
+.motion {
+  background: #1b1819;
+  padding: 70px; }
 
 /*
   text variables
@@ -855,15 +981,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   misc variables
 */
 .motion-description {
-  background: #1b1819;
-  padding: 70px; }
-  .motion-description__example {
-    font-weight: 400;
-    height: 44px;
-    display: flex;
-    justify-content: inherit;
-    align-items: center;
-    flex-direction: row; }
+  font-size: 1.333rem;
+  border-bottom: 0.5px solid #eeeced;
+  padding-bottom: 10px;
+  width: 50%; }
 
 /*
   text variables
@@ -943,23 +1064,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     flex-direction: column;
     gap: 20px;
     height: 100%; }
-
-/*
-  text variables
-*/
-/*
-  layout variables
-*/
-/*
-  color variables
-*/
-/*
-  misc variables
-*/
-.points-list__item {
-  font-size: 1.333rem;
-  display: block;
-  font-weight: 500; }
 
 /*
   text variables
@@ -1124,45 +1228,54 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 /*
   misc variables
 */
-.text-block--supplement {
+.text--supplement {
   margin-top: 44px; }
 
-.text-block--header {
+.text--header {
   font-weight: 500; }
 
-.text-block--xl {
+.text--xl {
   font-weight: 500;
   font-size: 3.157rem; }
 
-.text-block--l {
+.text--l {
   font-weight: 500;
   font-size: 2.369rem;
   padding: 100px; }
 
-.text-block--secondary {
+.text--secondary {
   color: #8c8c8c; }
 
-.text-block--half-secondary {
+.text--half-secondary {
   color: #bdbcbc; }
 
-.text-block--m {
+.text--m {
   font-weight: 500;
   font-size: 1.777rem; }
 
-.text-block--s {
+.text--s {
   font-weight: 500;
   font-size: 1.333rem; }
 
-.text-block--xs {
+.text--xs {
   font-weight: 500;
   font-size: 16px; }
 
-.text-block--centered {
+.text--centered {
   padding: 20px;
   text-align: center; }
 
-.text-block--bordered {
+.text--bordered {
   border: 3px solid #eeeced; }
+
+.text--padded {
+  padding: 10px; }
+
+.text--thin {
+  font-weight: 400; }
+
+.text--underline {
+  border-bottom: 0.5px solid #eeeced; }
 
 /*
   text variables

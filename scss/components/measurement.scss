@@ -5,7 +5,9 @@
     height: 100%;
     &__bar {
         border: 1px solid $light-primary;
+        // border-right: none;
         height: 100%;
+        overflow: hidden;
     }
 
     &__bar-fill {
@@ -13,22 +15,27 @@
         background: $color-primary;
         height: 100%;
     }
+    
+    &__text {
+        height: 100%;
+        @include flex(inherit, inherit, row);
+        padding-top: 5px;
+        padding-left: 20px;
 
-    &__label {
+        &--right {
+            float: right;
+        }
     }
 
     &__value {
+        height: 100%;
+        @include flex(center, inherit, column);
+        width: 40px;
     }
 
-    &__text {
+    &__label {
         height: 100%;
-        font-weight: 400;
+        margin-left: 20px;
         @include flex(center, inherit, column);
-        // padding-left: 10px;
-        border-bottom: 1px solid $light-primary;
-
-        &--left {
-            width: calc(100% + 20px);
-        }
     }
 }
